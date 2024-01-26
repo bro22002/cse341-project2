@@ -1,0 +1,43 @@
+GET http://localhost:3000/inventory
+
+
+### get inventory by Id
+GET http://localhost:3000/inventory/65b4024ea718abe3baf4c9fd
+
+
+### Create inventory
+POST  http://localhost:3000/inventory HTTP/1.1
+content-type: application/json
+
+{
+  "make": "Chevrolet",
+  "model": "Equinox",
+  "year": 2021,
+  "color": "Black",
+  "mileage": 15000,
+  "price": 28000,
+  "transmission": "Automatic",
+  "fuelType": "Hybrid",
+  "condition": "Like New"
+}
+
+
+### Update inventory
+PUT http://localhost:3000/inventory/65b40ba264754b0d88d5958c HTTP/1.1
+content-type: application/json
+
+{
+   "make": "Harley-Davidson",
+  "model": "Street Glide",
+  "year": 2022,
+  "color": "Dark Blue",
+  "mileage": 5000,
+  "price": 35000,
+  "transmission": "Manual",
+  "fuelType": "Gasoline",
+  "condition": "Brand New"
+}
+
+
+### Delete inventory
+DELETE http://localhost:3000/inventory/65b40ba264754b0d88d5958c HTTP/1.1
